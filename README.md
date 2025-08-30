@@ -1,12 +1,31 @@
-# React + Vite
+# 📧 Classificador de E-mails - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend do projeto **Classificador de E-mails**, um site onde você pode enviar um e-mail (em texto ou PDF) e receber:
 
-Currently, two official plugins are available:
+- Classificação se é **Produtivo** ou **Improdutivo**
+- Grau de **confiabilidade** da classificação
+- Uma **sugestão de resposta** gerada por IA
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 Deploy: [email-classificador.netlify.app](https://email-classificador.netlify.app/)  
+👉 Backend: [classificador-email-backend](https://github.com/kakiih/classificador-email-backend)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Tecnologias
+- [React](https://react.dev/) + [Vite](https://vitejs.dev/)
+- [Bootstrap](https://getbootstrap.com/)
+
+---
+
+## ⚙️ Como rodar localmente
+
+```bash
+# Clonar o repositório
+git clone https://github.com/kakiih/classificador-email-frontend.git
+cd classificador-email-frontend
+
+# Instalar dependências
+npm install
+
+# Rodar o projeto
+npm run dev
