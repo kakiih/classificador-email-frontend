@@ -1,6 +1,16 @@
 /* Layout principal */
 body#all {
-  background-color: #2b2b2b;
+  background-color: #f1f3f5;
+  transition: background 0.3s ease;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+body#all.dark-body {
+  background-color: #1e1e1e;
+  color: #f8f9fa;
   font-family: "Inter", sans-serif;
   line-height: 1.6;
   margin: 0;
@@ -9,58 +19,152 @@ body#all {
 
 .container {
   max-width: 700px;
-  margin: auto;
-  background: #f8f9fa;
+  margin: 3rem auto;
+  background: #fff;
   padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   text-align: left;
+  transition: all 0.3s ease;
+}
+
+/* Dark mode */
+.container.dark {
+  background: #2b2b2b;
+  color: #f8f9fa;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
 }
 
 h1#title {
-  color: #3d3d3d;
+  color: #343a40;
   text-align: center;
   margin-bottom: 2rem;
+  font-weight: 700;
 }
 
+.container.dark h1#title {
+  color: #f8f9fa;
+}
 
+/* Inputs */
 textarea,
 input[type="file"] {
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
   transition: all 0.2s ease;
+  padding: 0.75rem;
+  background: #fff;
+  color: #000;
+}
+
+.container.dark textarea,
+.container.dark input[type="file"] {
+  background: #303030;
+  color: #faf8f8;
+  border: 1px solid #555;
+}
+
+textarea::placeholder,
+input::placeholder {
+  color: #6c757d; /* cinza escuro */
+  opacity: 1; /* garante visibilidade */
+}
+
+/* Placeholder no dark mode */
+body.dark-body textarea::placeholder,
+body.dark-body input::placeholder {
+  color: #b0b0b0; /* cinza claro para contraste */
+  opacity: 1;
 }
 
 textarea:focus,
 input[type="file"]:focus {
   border-color: #0d6efd;
-  box-shadow: 0 0 5px rgba(13, 110, 253, 0.3);
+  box-shadow: 0 0 8px rgba(13, 110, 253, 0.3);
   outline: none;
 }
 
+/* Botão */
 button.btn {
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 0.75rem;
-  font-weight: 500;
-  transition: background 0.3s ease;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button.btn:hover {
   background-color: #0b5ed7;
 }
 
+/* Dark mode botão alternar */
+.mode-btn {
+  float: right;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.7rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #0d6efd;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.mode-btn:hover {
+  background-color: #0b5ed7;
+}
+
+/* Loading spinner */
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  margin-right: 0.5rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+}
+
+/* Result Box */
 .result-box {
   margin-top: 2rem;
   padding: 1.5rem;
-  border-radius: 8px;
-  background: #ffffff;
-  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #f8f9fa;
+  border-left: 6px solid #0d6efd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
 }
 
+.container.dark .result-box {
+  background: #3a3a3a;
+  border-left: 6px solid #0d6efd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Badges */
 .badge {
   padding: 0.5em 0.75em;
   border-radius: 6px;
-  font-size: 0.9em;
+  font-size: 0.95em;
+  font-weight: 500;
 }
 
 .bg-success {
@@ -75,18 +179,30 @@ button.btn:hover {
 
 /* Barra de progresso */
 .progress {
-  height: 20px;
+  height: 22px;
   background-color: #e9ecef;
-  border-radius: 6px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
+.container.dark .progress {
+  background-color: #555;
+}
+
 .progress-bar {
-  background-color: #0d6efd;
   color: #fff;
   font-size: 0.85em;
   font-weight: 500;
   text-align: center;
-  line-height: 20px;
-  transition: width 0.35s ease;
+  line-height: 22px;
+  transition: width 0.5s ease;
+}
+
+/* Pre para resposta */
+pre {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  overflow-x: auto;
 }
