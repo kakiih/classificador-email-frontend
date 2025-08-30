@@ -1,0 +1,92 @@
+/* Layout principal */
+body#all {
+  background-color: #2b2b2b;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: auto;
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  text-align: left;
+}
+
+h1#title {
+  color: #3d3d3d;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+
+textarea,
+input[type="file"] {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: all 0.2s ease;
+}
+
+textarea:focus,
+input[type="file"]:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 5px rgba(13, 110, 253, 0.3);
+  outline: none;
+}
+
+button.btn {
+  border-radius: 6px;
+  padding: 0.75rem;
+  font-weight: 500;
+  transition: background 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #0b5ed7;
+}
+
+.result-box {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+}
+
+.badge {
+  padding: 0.5em 0.75em;
+  border-radius: 6px;
+  font-size: 0.9em;
+}
+
+.bg-success {
+  background-color: #198754 !important;
+  color: #fff;
+}
+
+.bg-secondary {
+  background-color: #6c757d !important;
+  color: #fff;
+}
+
+/* Barra de progresso */
+.progress {
+  height: 20px;
+  background-color: #e9ecef;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #0d6efd;
+  color: #fff;
+  font-size: 0.85em;
+  font-weight: 500;
+  text-align: center;
+  line-height: 20px;
+  transition: width 0.35s ease;
+}

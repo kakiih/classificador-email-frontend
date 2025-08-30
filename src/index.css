@@ -1,0 +1,10 @@
+/* index.css */
+body {
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
