@@ -29,3 +29,11 @@ npm install
 
 # Rodar o projeto
 npm run dev
+
+#Atenção!
+no caso de rodar o backend localmente também atualize a linha:
+  const API_URL = "https://classificador-email-backend.onrender.com/processar-email";
+para
+  const API_URL = "(porta-local)/processar-email";
+se for utilizar o backend no deploy pode ignorar.
+
