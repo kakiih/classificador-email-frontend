@@ -14,7 +14,7 @@ function App() {
     document.body.className = darkMode ? "dark-body" : "";
   }, [darkMode]);
 
-  const API_URL = "http://127.0.0.1:8000/processar-email/";
+  const API_URL = "https://classificador-email-backend.onrender.com/processar-email";
 
   const handleSubmit = async (e) => {
     e.preventDefault();
